@@ -18,6 +18,23 @@ body {
   min-height: 100vh;
 }
 
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0) invert(1);  /* turns dark SVGs to white on the sidebar */
+  display: block;
+}
+
+.icon-large {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+.icon-dark {
+  filter: none; /* retains dark color */
+}
+
 .header {
   grid-area: header;
   background-color: #ffffff;
@@ -41,6 +58,16 @@ body {
   gap: 1.5rem;
 }
 
+.header-buttons button {
+  background-color: #1992d4;
+  color: white;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .sidebar {
   grid-area: sidebar;
   background-color: #1992d4;
@@ -49,6 +76,15 @@ body {
   grid-template-rows: auto 1fr auto;
   gap: 3rem;
   padding: 1.5rem;
+}
+
+.brand {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .sidebar-nav, 
@@ -65,10 +101,93 @@ body {
   font-weight: bold;
 }
 
-li{
+nav-links ul{
     list-style-type: none;
+    display: grid;
+    gap: 1.25rem;
 }
 
-a{
+.nav-links li{
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links a{
     text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #e2e8f0;
+  outline: none;
+}
+
+.user-notifications {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fcd34d;
+}
+
+.user-name-small {
+  font-weight: 700;
+}
+
+.user-greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar-large {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fcd34d;
+}
+
+.greeting-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.user-handle {
+  font-size: 1.3rem;
+}
+
+.content {
+  grid-area: main;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
 }
