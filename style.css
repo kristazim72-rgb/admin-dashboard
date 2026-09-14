@@ -18,6 +18,28 @@ body {
   min-height: 100vh;
 }
 
+.header {
+  grid-area: header;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.header-top, 
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.header-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+}
 
 .sidebar {
   grid-area: sidebar;
